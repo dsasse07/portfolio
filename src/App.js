@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import styled, { ThemeProvider, createGlobalStyle } from 'styled-components'
+import { useState } from 'react'
+import backgroundGradient2 from './assets/backgroundGradient2.png'
+import Header from './components/Header'
+import About from './components/About'
+import Projects from './components/Projects'
+import Blogs from './components/Blogs'
+import Contact from './components/Contact'
+
+const GlobalStyle = createGlobalStyle`
+  :root{
+    --white: #fcfcfc;
+  }
+  body {
+    background: rgb(191,254,212);
+    background: linear-gradient(0deg, rgba(191,254,212,1) 4%, rgba(148,187,233,1) 100%);    /* background-image: url(${backgroundGradient2});
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: stretch; */
+  }
+`;
 
 function App() {
+  // const [ theme, setTheme ] = useState(lightTheme)
+  const handleToggleTheme = () => {
+
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      {/* <ThemeProvider theme={theme} > */}
+        <GlobalStyle />
+        <Header onToggleTheme={handleToggleTheme}/>
+        <About />
+        <Projects />
+        <Blogs />
+        <Contact />
+      {/* </ThemeProvider> */}
+    </>
+  )
 }
 
 export default App;
