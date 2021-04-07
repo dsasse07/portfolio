@@ -5,6 +5,14 @@ function Blogs() {
 
   return (
     <Container id="blogs">
+      <Heading>
+        <SectionHeading>
+          Tech Writing
+        </SectionHeading>
+        <Description>
+          With a love or developing, comes a love for sharing what I've learned with others.
+        </Description>
+      </Heading>
       <BlogCard
         title="Conditional Function Invocation without Conditional Statements in JS"
         date="Published: Mar 7 2021"
@@ -42,11 +50,34 @@ function Blogs() {
 export default Blogs
 
 const Container = styled.div`
-  border: 2px solid white;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
   align-items: center;
   padding: 1rem;
+`
+
+const Heading = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 20px;
+`
+
+const SectionHeading = styled.h2`
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+`
+
+const Description = styled.h4`  
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.25rem;
+  font-weight: normal;
 `

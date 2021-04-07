@@ -10,12 +10,12 @@ function Contact() {
       <Row>
         <Col>
           <SectionHeading>
-            Contact Me
+            Contact Me:
           </SectionHeading>
         </Col>
         <Col>
           <DescriptionText>
-            Discuss a project or just want to say hi? 
+            Discuss a project? Just say hi? 
           </DescriptionText>
           <DescriptionText>
             My Inbox is open!
@@ -49,7 +49,6 @@ function Contact() {
 export default Contact
 
 const Container = styled.div`
-  border: 2px solid white;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -61,7 +60,7 @@ const Row = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
 `
 
@@ -72,8 +71,13 @@ const Col = styled.div`
   justify-content: center;
   align-items: center;
 
+  @media (min-width: 800px){
+    align-items: flex-end;
+  }
+
   :last-of-type{
     flex-grow: 2;
+    align-items: center;
   }
 `
 

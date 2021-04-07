@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     background: rgb(191,254,212);
     background: linear-gradient(0deg, rgba(191,254,212,1) 4%, rgba(148,187,233,1) 100%);
+    font-family: 'Comfortaa', cursive;
   }
 `;
 
@@ -55,14 +56,9 @@ function App() {
         <Blogs />
         <Contact />
         { showButton &&
-        <GoToTop onClick={ 
-          () => {
-            scrollToRef(topRef)
-            console.log(`topRef.current`, window.scrollY) 
-        }}
-        >  
-          <PublishIcon />
-        </GoToTop>
+          <GoToTop onClick={ () => scrollToRef(topRef) } >  
+            <PublishIcon />
+          </GoToTop>
         }
       {/* </ThemeProvider> */}
     </>

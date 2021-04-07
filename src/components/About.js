@@ -12,7 +12,12 @@ function About() {
         <img src={profilePhoto} alt="Danny Sasse" />
       </PhotoContainer>
       <TextContainer>
-        <Greeting> Hello! I'm Danny,</Greeting>
+        <Greeting> 
+          Hello!
+        </Greeting>
+        <Greeting>
+          I'm Danny,
+        </Greeting>
         <AboutMe> An enthusiastic Full Stack Software Developer with experience in React and Ruby on Rails. I am passionate about designing and optimizing innovative solutions to projects, and learning new technologies. </AboutMe>
         <SocialLinks className="social">
           <LogoLink background="black" href="https://github.com/dsasse07" target="_blank">
@@ -28,8 +33,11 @@ function About() {
             <img src={devIcon} alt="Dev.to" />
           </LogoLink>
         </SocialLinks>
-
-
+        <ButtonBar>
+          <Button>
+            SEE MY RESUME
+          </Button>
+        </ButtonBar>
       </TextContainer>
     </Container>
   )
@@ -38,7 +46,6 @@ function About() {
 export default About
 
 const Container = styled.section`
-  border: 2px solid white;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -65,6 +72,7 @@ const TextContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 1rem;
+  padding-top: 0;
 
   h1 {
     margin: 0;
@@ -73,6 +81,8 @@ const TextContainer = styled.div`
 
 const Greeting = styled.h1`
   text-align: center;
+  font-size: 2.5rem;
+  padding: 5px;
 `
 const AboutMe = styled.h3`
   font-weight: normal;
@@ -102,4 +112,19 @@ const LogoLink = styled.a`
   :hover{
     transform: scale(1.2);
   }
+`
+
+const ButtonBar = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18px;
+`
+
+const Button = styled.button`
+  padding: 8px;
+  background: #A8EFDD;
+  border: 1px solid gray;
+  box-shadow: 1px 2px 6px 1px gray;
 `

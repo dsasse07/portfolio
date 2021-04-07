@@ -5,10 +5,17 @@ import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import LinkIcon from '@material-ui/icons/Link';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import YouTubeIcon from '@material-ui/icons/YouTube';
+import YoutubeEmbed from './YoutubeEmbed'
+import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
 
-function ProjectCard({title, logo, technologies, description, repoLink, url, demoVideo}) {
+function ProjectCard({title, logo, technologies, description, repoLink, url, demoVideo, embedId}) {
   const [ showDescription, setShowDescription ] = useState(false)
+  const [ showVideo, setShowVideo ] = useState(false)
   const breakpoints = useBreakpoint()
+
+  function toggleMode(){
+    setShowVideo( showVideo => !showVideo )
+  }
 
   const techTagComponents = technologies.map( (tech, index) => {
     return (
@@ -20,41 +27,52 @@ function ProjectCard({title, logo, technologies, description, repoLink, url, dem
 
     return (
       <Card >
-        <Row>
-          <LogoContainer>
-            <Logo src={logo} alt={ `${title} logo`} />
-          </LogoContainer>
-          <Column>
-            <Title>
-              {title}
-            </Title>
+        <VideoButton className="link" showVideo={showVideo} onClick={toggleMode}>
+          {showVideo ? 
+            <InfoOutlinedIcon style={{color: "white"}} />
+          :
+            <YouTubeIcon style={{color: "white"}} />
+          }
+        </VideoButton>
+        
+        { showVideo ?
+          <YoutubeEmbed embedId={embedId} />
+        :
+          <>
             <Row>
-              <LinkButton href={url} target="_blank" >
-                <LinkIcon style={{color: "black"}}/>
-              </LinkButton>
-              <LinkButton href={repoLink} target="_blank" >
-                <GitHubIcon style={{color: "black"}}/>
-              </LinkButton>
-              <LinkButton href={demoVideo} target="_blank" >
-                <YouTubeIcon style={{color: "red"}}/>
-              </LinkButton>
+              <LogoContainer>
+                <Logo src={logo} alt={ `${title} logo`} />
+              </LogoContainer>
+              <Column>
+                <Title>
+                  {title}
+                </Title>
+                <Row>
+                  <LinkButton href={url} target="_blank" >
+                    <LinkIcon style={{color: "black"}}/>
+                  </LinkButton>
+                  <LinkButton href={repoLink} target="_blank" >
+                    <GitHubIcon style={{color: "black"}}/>
+                  </LinkButton>
+                </Row>
+              </Column>
             </Row>
-          </Column>
-        </Row>
-        <TechnologyContainer>
-          {techTagComponents}
-        </TechnologyContainer>
-        <Row>
-          <Description open={showDescription}>
-            {description}
-          </Description>
-        </Row>
-        <ExpandButton onClick={() => setShowDescription(showDescription => !showDescription) }>
-          <DownArrow open={showDescription}/>
-          {showDescription ? "Close" : "Expand" }
-          <DownArrow open={showDescription}/>
-        </ExpandButton>
-    </Card>
+            <TechnologyContainer>
+              {techTagComponents}
+            </TechnologyContainer>
+            <Row>
+              <Description open={showDescription}>
+                {description}
+              </Description>
+            </Row>
+            <ExpandButton onClick={() => setShowDescription(showDescription => !showDescription) }>
+              <DownArrow open={showDescription}/>
+              {showDescription ? "Close" : "Expand" }
+              <DownArrow open={showDescription}/>
+            </ExpandButton>
+          </>
+        }
+      </Card>
     )
 
 }
@@ -62,12 +80,25 @@ function ProjectCard({title, logo, technologies, description, repoLink, url, dem
 export default ProjectCard
 
 const Card = styled.article`
+  position: relative;
   background: white;
   width: 100%;
   max-width: 500px;
   padding: 0.5rem;
   box-shadow: 1px 2px 6px 1px gray;
+  overflow: hidden;
+
+  :hover .link {
+    width: 60px;
+    height: 60px;
+
+    svg {
+      top: 10px;
+      right: 5px;
+    }
+  }
 `
+
 const Row = styled.div`
   display: flex;
   width: 100%;
@@ -158,5 +189,33 @@ const Description = styled.summary`
 
 const DownArrow = styled(KeyboardArrowDownIcon)`
   transform: ${ props => props.open ? "rotateX(180deg)" : "rotateX(0deg)" };
+`
+
+
+const VideoButton = styled.a`
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  width: 30px;
+  height: 30px;
+  text-decoration: none;
+  background: ${({showVideo}) => showVideo ? "black" : "#FF0102" };
+  border-radius: 0 0 0 80px;
+  padding: 5px;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  transition: all 0.3s;
+  cursor: pointer;
+  opacity: ${({showVideo}) => showVideo ? "70%" : "100%" };
+  z-index: 15;
+
+  svg {
+    position: absolute;
+    width: 40px;
+    top: 4px;
+    right: -2px;
+    transition: 0.2s;
+  }
 `
 
