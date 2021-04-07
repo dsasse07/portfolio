@@ -1,4 +1,5 @@
-import styled, { ThemeProvider, createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
+// import { ThemeProvider } from 'styled-components'
 import Header from './components/Header'
 import About from './components/About'
 import Projects from './components/Projects'

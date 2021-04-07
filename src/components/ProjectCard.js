@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { useState } from 'react'
-import { useBreakpoint } from './BreakpointProvider'
+// import { useBreakpoint } from './BreakpointProvider'
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import LinkIcon from '@material-ui/icons/Link';
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -11,7 +11,7 @@ import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
 function ProjectCard({title, logo, technologies, description, repoLink, url, demoVideo, embedId}) {
   const [ showDescription, setShowDescription ] = useState(false)
   const [ showVideo, setShowVideo ] = useState(false)
-  const breakpoints = useBreakpoint()
+  // const breakpoints = useBreakpoint()
 
   function toggleMode(){
     setShowVideo( showVideo => !showVideo )
