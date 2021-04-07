@@ -6,7 +6,7 @@ import Projects from './components/Projects'
 import Blogs from './components/Blogs'
 import Contact from './components/Contact'
 import PublishIcon from '@material-ui/icons/Publish';
-import { useRef, useEffect, useState } from 'react'
+import { useRef, useState } from 'react'
 
 const GlobalStyle = createGlobalStyle`
   :root{
@@ -25,12 +25,7 @@ function App() {
   // const [ theme, setTheme ] = useState(lightTheme)
   const [ showButton, setShowButton ] = useState(false)
 
-  useEffect( () => {
-    window.addEventListener( "scroll", handleShowButton)
-    return ( () => {
-      window.removeEventListener( "scroll", handleShowButton)
-    })
-  }, [])
+  window.addEventListener( "scroll", handleShowButton)
 
   function handleShowButton(){
     if (window.scrollY > 200 && !showButton) {

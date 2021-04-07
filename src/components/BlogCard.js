@@ -23,7 +23,9 @@ function BlogCard({title, date, url, image}) {
     <Card onMouseEnter={handleShowLink} onMouseLeave={handleHideLink}>
       <LinkButton className="link" href={url} target="_blank" >
         <img src={devIcon} alt="Dev.to logo" />
-        <ArrowIcon showLink={showLink}/>
+        <IconContainer showLink={showLink}>
+          <ArrowIcon />
+        </IconContainer>
       </LinkButton>
       <Row>
         <LogoContainer>
@@ -64,7 +66,7 @@ const Card = styled.article`
       right: 30px;
       top: 20px;
     }
-    svg{
+    div{
       top: 21px;
     }
   }
@@ -125,13 +127,16 @@ const LinkButton = styled.a`
   }
 `
 
-const ArrowIcon = styled(ArrowForwardIcon)`
+const IconContainer = styled.div`
+  transition: 0.2s;
   position: absolute;
   top: 8px;
   right: 8px;
-  color: white;
-  transition: 0.2s;
   opacity: ${ ({showLink}) => showLink ? "100%" : "0" };
+`
+
+const ArrowIcon = styled(ArrowForwardIcon)`
+  color: white;
 `
 
 
