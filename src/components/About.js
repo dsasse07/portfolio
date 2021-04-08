@@ -9,10 +9,10 @@ function About() {
   
   return (
     <Container id="about">
-      <PhotoContainer>
+      <PhotoContainer className="flex-item">
         <img src={profilePhoto} alt="Danny Sasse" />
       </PhotoContainer>
-      <TextContainer>
+      <TextContainer className="flex-item" >
         <Greeting> 
           Hello!
         </Greeting>
@@ -50,9 +50,12 @@ const Container = styled.section`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  /* gap: 2rem; */
   align-items: center;
   padding: 1rem;
+  .flex-item {
+    margin: 1rem;
+  }
 `
 const PhotoContainer = styled.div`
   width: 40vw;
@@ -94,7 +97,10 @@ const SocialLinks = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.7rem;
+  /* gap: 0.7rem; */
+  a {
+    margin: 0.35rem;
+  }
 `
 const LogoLink = styled.a`
   display: flex;

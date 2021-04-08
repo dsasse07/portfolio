@@ -35,7 +35,6 @@ const Head = styled.header`
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  gap: 1rem;
 `
 
 const TogglerContainer = styled.div`
@@ -68,7 +67,12 @@ const Name = styled.span`
 const NavBar = styled.nav`
   display: flex; 
   flex-wrap: wrap;
-  gap: 1rem;
+  /* gap: 1rem; */
+  justify-content: center;
+
+  a {
+    margin: 0.5rem;
+  }
 `
 
 const Button = styled.button`

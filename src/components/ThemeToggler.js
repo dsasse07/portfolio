@@ -21,15 +21,21 @@ const OuterContainer = styled.div`
   align-items: center;
   border: 2px solid ${(props) => props.theme.logoName};
   border-radius: 20px;
-  gap: 4px;
+  /* gap: 4px; */
   padding: 2px;
   padding-left: 3px;
   padding-right: 2px;
+  cursor: pointer;
 
   svg{
     height: 25px;
     width: 25px;
     color: ${(props) => props.theme.fontColor};
+    
+    :first-of-type{
+      margin-right: 4px;
+    }
+
   }
 `
 
@@ -41,5 +47,5 @@ const Slider = styled.div`
   height: 24px;
   width: 24px;
   border-radius: 50%;
-  transition: 0.4s;
+  transition: 0.3s;
 `

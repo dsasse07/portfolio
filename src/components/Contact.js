@@ -50,7 +50,6 @@ const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
   align-items: center;
   padding: 1rem;
 `
@@ -67,7 +66,6 @@ const Heading = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
   width: 100%;
   padding: 20px;
 `
@@ -95,11 +93,16 @@ const LinkText = styled.a`
 `
 
 const SocialLinks = styled.div`
-  margin-top: 25px;
+  margin-top: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.7rem;
+
+  a {
+    margin-left: 0.35rem;
+    margin-right: 0.35rem;
+    margin-bottom: 0.35rem;
+  }
 `
 const LogoLink = styled.a`
   display: flex;

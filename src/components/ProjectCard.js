@@ -26,7 +26,7 @@ function ProjectCard({title, logo, technologies, description, repoLink, url, dem
   })
 
     return (
-      <Card >
+      <Card className="flex-item">
         <VideoButton className="link" showVideo={showVideo} onClick={toggleMode}>
           {showVideo ? 
             <InfoOutlinedIcon style={{color: "white"}} />
@@ -67,7 +67,7 @@ function ProjectCard({title, logo, technologies, description, repoLink, url, dem
             </Row>
             <ExpandButton onClick={() => setShowDescription(showDescription => !showDescription) }>
               <DownArrow open={showDescription}/>
-              {showDescription ? "Close" : "Expand" }
+              {showDescription ? "Close" : "Description" }
               <DownArrow open={showDescription}/>
             </ExpandButton>
           </>
@@ -103,16 +103,12 @@ const Row = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-evenly;
-
-  :last-of-type{
-    gap: 2rem;
-  }
 `
 const LinkRow = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-around;
-  margin-top: 5px;
+  margin-top: 15px;
   margin-bottom: 5px;
 `
 const Column = styled.div`
@@ -155,6 +151,8 @@ const LinkButton = styled.a`
   padding: 5px;
   border: 1px solid black;
   transition: 0.2s;
+  box-shadow: ${(props) => props.theme.shadow};
+  
   svg {
     transition: 0.2s;
     color: black;
@@ -171,9 +169,12 @@ const LinkButton = styled.a`
 const TechnologyContainer = styled.section`
   display: flex;
   flex-wrap: wrap;
-  gap: 0.2rem;
   justify-content: center;
   margin-top:0.5rem;
+
+  span {
+    margin: 0.1rem;
+  }
 `
 const TechTag = styled.span`
   border: 1px solid ${(props) => props.theme.logoName};
@@ -228,12 +229,12 @@ const VideoButton = styled.a`
   background: ${({showVideo}) => showVideo ? "black" : "#FF0102" };
   border-radius: 0 0 0 80px;
   padding: 5px;
-  border-left: 1px solid white;
-  border-bottom: 1px solid white;
+  border-left: 1px solid ${(props) => props.theme.itemBackground};
+  border-bottom: 1px solid ${(props) => props.theme.itemBackground};
   transition: all 0.3s;
   cursor: pointer;
   opacity: ${({showVideo}) => showVideo ? "70%" : "100%" };
-  z-index: 15;
+  z-index: 2;
 
   svg {
     position: absolute;

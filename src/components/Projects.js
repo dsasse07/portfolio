@@ -53,9 +53,13 @@ const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  /* gap: 2rem; */
   align-items: center;
   padding: 1rem;
+  
+  .flex-item{
+    margin: 1rem;
+  }
 `
 
 const Heading = styled.div`
@@ -63,9 +67,13 @@ const Heading = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  /* gap: 1rem; */
   width: 100%;
   padding: 20px;
+  
+  h2, h4 {
+    margin: 0.5rem;
+  }
 `
 
 const SectionHeading = styled.h2`
