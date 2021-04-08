@@ -48,9 +48,11 @@ function ProjectCard({title, logo, technologies, description, repoLink, url, dem
                   {title}
                 </Title>
                 <LinkRow>
-                  <LinkButton href={url} target="_blank" >
-                    <LinkIcon />
-                  </LinkButton>
+                  { url && 
+                    <LinkButton href={url} target="_blank" >
+                      <LinkIcon />
+                    </LinkButton>
+                  }
                   <LinkButton href={repoLink} target="_blank" >
                     <GitHubIcon />
                   </LinkButton>
@@ -108,7 +110,7 @@ const LinkRow = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-around;
-  margin-top: 15px;
+  margin-top: 5px;
   margin-bottom: 5px;
 `
 const Column = styled.div`
@@ -136,6 +138,7 @@ const Title = styled.header`
   width: 100%;
   text-align: center;
   margin: 0;
+  margin-top: 10px;
   padding: 0;
   margin-bottom: 0.4rem;
 

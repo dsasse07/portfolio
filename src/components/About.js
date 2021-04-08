@@ -62,6 +62,8 @@ const Container = styled.section`
   /* gap: 2rem; */
   align-items: center;
   padding: 1rem;
+  min-height: 70vh;
+
   .flex-item {
     margin: 1rem;
   }

@@ -10,7 +10,7 @@ function Blogs() {
           Tech Writing
         </SectionHeading>
         <Description>
-          With a love or developing, comes a love for sharing what I've learned with others.
+          With a love of developing, comes a love for sharing what I've learned with others.
         </Description>
       </Heading>
       <BlogCard
@@ -55,6 +55,8 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   padding: 1rem;
+  min-height: 100vh;
+
   .flex-item {
     margin: 1rem;
   }

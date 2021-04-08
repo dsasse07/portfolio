@@ -34,12 +34,32 @@ function Projects() {
       <ProjectCard 
         title="Fludoku"
         logo="https://miro.medium.com/max/516/1*TStHCO5xf_9KQNvz0o8rmA.gif" 
-        description="Developed as a pair-programming project in ReactJS. Connects to the National Parks Service and Google Maps APIs with a Rails API backend"
+        description="A Sudoku web-app that uses a custom backtracking algorithm to create Sudoku of user-defined difficulty, that have unique solutions."
         repoLink="https://github.com/dsasse07/Fludoku" 
         url="https://fludoku.netlify.app/"
         demoVideo="https://youtu.be/3SA975NHH00"
         embedId="3SA975NHH00"
         technologies={["vanillaJS", "Backtracking", "CSS GRID", "Rails API"]}
+      />
+      <ProjectCard 
+        title="Family Organizer"
+        logo="https://i.imgur.com/PmCMSXC.png" 
+        description="A Ruby on Rails application utilizing the MVC framework and a PostgreSQL database. ActiveStorage is utilized for user uploads and storage"
+        repoLink="https://github.com/dsasse07/Family-Organizer" 
+        url={null}
+        demoVideo="https://youtu.be/7hwDpslkDH8"
+        embedId="7hwDpslkDH8"
+        technologies={["Ruby", "Ruby on Rails", "PostgreSQL", "ActiveStorage"]}
+      />
+      <ProjectCard 
+        title="Subscription Tracker"
+        logo="https://i.imgur.com/XgdJDPr.png" 
+        description="Ruby CLI application developed using ActiveRecord and SQLite3 for creating reminders for subscription services and syncing those reminders to calendar applications through the creation of .ics files."
+        repoLink="https://github.com/simonjacobs212/subscription-tracker" 
+        url={null}
+        demoVideo="https://youtu.be/PtoSdk4yNIY"
+        embedId="PtoSdk4yNIY"
+        technologies={["Ruby", "ActiveRecord", "SQLite3", "FileIO"]}
       />
       
       
@@ -56,6 +76,7 @@ const Container = styled.div`
   /* gap: 2rem; */
   align-items: center;
   padding: 1rem;
+  min-height: 100vh;
   
   .flex-item{
     margin: 1rem;
