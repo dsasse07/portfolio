@@ -5,7 +5,7 @@ function Footer() {
   return (
     <Container>
       <Text>
-        Developed using React
+        Built with React + custom Styled Components
       </Text>
       <Link href="https://github.com/dsasse07/portfolio" target="_blank" >
         View Source Code
