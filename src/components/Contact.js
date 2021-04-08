@@ -19,9 +19,6 @@ function Contact() {
           <DescriptionText>
             My Inbox is open!
           </DescriptionText>
-          <LinkText href="tel:(609) 433 2308" >
-            { "(609) 433 2308" }
-          </LinkText>
           <LinkText href="mailto: dsasse07@gmail.com">
             dsasse07@gmail.com
           </LinkText>
