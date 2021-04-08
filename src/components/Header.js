@@ -26,15 +26,17 @@ function Header({onToggleTheme}) {
 export default Header
 
 const Head = styled.header`
-  position: relative;
-  display: flex;
-  margin: 1rem;
-  padding: 1rem;
-  padding-top: 50px;
-  font-size: 1.5rem;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
   align-items: center;
+  display: flex;
+  padding: 1rem;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
+  justify-content: space-evenly;
+  padding-bottom: 0;
+  padding-top: 50px;
+  position: relative;
+  margin: 1rem;
+  margin-bottom: 0;
 `
 
 const TogglerContainer = styled.div`

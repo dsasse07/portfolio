@@ -3,6 +3,7 @@ import profilePhoto from '../assets/profilePic.jpg'
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import TwitterIcon from '@material-ui/icons/Twitter';
+import InstagramIcon from '@material-ui/icons/Instagram';
 import devIcon from '../assets/devIcon.png'
 
 function About() {
@@ -19,13 +20,21 @@ function About() {
         <Greeting>
           I'm Danny,
         </Greeting>
-        <AboutMe> An enthusiastic Full Stack Software Developer with experience in React and Ruby on Rails. I am passionate about designing and optimizing innovative solutions to projects, and learning new technologies. </AboutMe>
+        <AboutMe> 
+          An enthusiastic Full Stack Software Developer with experience in React and Ruby on Rails. I am passionate about designing and optimizing innovative solutions to projects, and trying new technologies.
+        </AboutMe>
+        <AboutMe>
+          I treasure the beauty of the natural world and enjoy exploring it through hiking and camping, or from the skies as an aerial photographer. I am a science lover and never stop asking "how" or "why".
+        </AboutMe>
         <SocialLinks className="social">
           <LogoLink background="black" href="https://github.com/dsasse07" target="_blank">
             <GitHubIcon style={{color: "#FFFFFF"}} />
           </LogoLink >
           <LogoLink background="#0E65C2" href="https://www.linkedin.com/in/danny-sasse/" target="_blank">
             <LinkedInIcon style={{color: "#FFFFFF"}}  />
+          </LogoLink>
+          <LogoLink background="#F64E4D" href="https://www.instagram.com/dsasse.imaging/" target="_blank">
+            <InstagramIcon style={{color: "#FFFFFF"}}  />
           </LogoLink>
           <LogoLink background="#1EA2F1" href="https://twitter.com/dannysasse" target="_blank">
             <TwitterIcon style={{color: "#FFFFFF"}}  />
@@ -91,6 +100,10 @@ const Greeting = styled.h1`
 const AboutMe = styled.h3`
   font-weight: normal;
   text-align: center;
+
+  :nth-of-type(2){
+    margin-top: 0;
+  }
 `
 
 const SocialLinks = styled.div`
