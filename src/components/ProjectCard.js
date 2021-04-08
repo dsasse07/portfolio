@@ -121,6 +121,7 @@ const Column = styled.div`
   justify-content: center;
   align-items: center;
   max-width: 50vw;
+  min-width: 180px;
 `
 const LogoContainer = styled.div`
   display: flex;
