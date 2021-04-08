@@ -5,6 +5,7 @@ import About from './components/About'
 import Projects from './components/Projects'
 import Blogs from './components/Blogs'
 import Contact from './components/Contact'
+import Footer from './components/Footer'
 import PublishIcon from '@material-ui/icons/Publish';
 import { useRef, useState, useEffect } from 'react'
 import { useBreakpoint } from './components/BreakpointProvider'
@@ -73,6 +74,7 @@ function App() {
         <Projects />
         <Blogs />
         <Contact />
+        <Footer />
         { showButton &&
           <GoToTop onClick={ () => scrollToRef(topRef) } >  
             <PublishIcon />
