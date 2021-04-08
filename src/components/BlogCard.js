@@ -94,6 +94,7 @@ const Title = styled.header`
   width: 100%;
   text-align: center;
   margin: 0;
+  margin-top: 6px;
   padding: 0;
   margin-bottom: 0.4rem;
 `

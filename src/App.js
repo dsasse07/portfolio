@@ -66,7 +66,7 @@ export default App;
 const GoToTop = styled.button`
   position: fixed;
   bottom: 50px;
-  right: 15px;
+  left: 15px;
   background: #fc3796;
   color: white;
   border: 1px solid gray;
@@ -75,4 +75,5 @@ const GoToTop = styled.button`
   border-radius: 8px;
   box-shadow: 2px 2px 4px 1px gray;
   cursor: pointer;
+  z-index: 10;
 `

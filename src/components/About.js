@@ -34,7 +34,7 @@ function About() {
           </LogoLink>
         </SocialLinks>
         <ButtonBar>
-          <Button>
+          <Button href="https://docs.google.com/document/d/13qDrFQWZhHh7iyThX1FvDnUUeDEtRsfj_AjaB9V3Ino/edit?usp=sharing" target="_blank">
             SEE MY RESUME
           </Button>
         </ButtonBar>
@@ -122,9 +122,19 @@ const ButtonBar = styled.div`
   margin-top: 18px;
 `
 
-const Button = styled.button`
+const Button = styled.a`
   padding: 8px;
   background: #A8EFDD;
   border: 1px solid gray;
   box-shadow: 1px 2px 6px 1px gray;
+  outline: none;
+  transition: 0.2s;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 0.9rem;
+  :hover{
+    transform: scale(1.1);
+  }
 ` 

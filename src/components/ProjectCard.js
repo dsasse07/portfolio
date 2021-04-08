@@ -47,14 +47,14 @@ function ProjectCard({title, logo, technologies, description, repoLink, url, dem
                 <Title>
                   {title}
                 </Title>
-                <Row>
+                <LinkRow>
                   <LinkButton href={url} target="_blank" >
-                    <LinkIcon style={{color: "black"}}/>
+                    <LinkIcon />
                   </LinkButton>
                   <LinkButton href={repoLink} target="_blank" >
-                    <GitHubIcon style={{color: "black"}}/>
+                    <GitHubIcon />
                   </LinkButton>
-                </Row>
+                </LinkRow>
               </Column>
             </Row>
             <TechnologyContainer>
@@ -108,6 +108,13 @@ const Row = styled.div`
     gap: 2rem;
   }
 `
+const LinkRow = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 5px;
+  margin-bottom: 5px;
+`
 const Column = styled.div`
   display: flex;
   flex-direction: column;
@@ -141,7 +148,19 @@ const LinkButton = styled.a`
   background: white;
   border-radius: 50%;
   padding: 5px;
-  
+  border: 1px solid black;
+  transition: 0.2s;
+  svg {
+    transition: 0.2s;
+    color: black;
+  }
+
+  :hover{
+    background: black;
+    svg{
+      color: white;
+    }
+  }
 `
 
 const TechnologyContainer = styled.section`

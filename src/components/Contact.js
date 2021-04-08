@@ -7,12 +7,11 @@ import devIcon from '../assets/devIcon.png'
 function Contact() {
   return (
     <Container id="contact" >
-      <Row>
-        <Col>
+        <Heading>
           <SectionHeading>
             Contact Me:
           </SectionHeading>
-        </Col>
+        </Heading>
         <Col>
           <DescriptionText>
             Discuss a project? Just say hi? 
@@ -41,7 +40,6 @@ function Contact() {
             </LogoLink>
           </SocialLinks>
         </Col>
-      </Row>
     </Container>
   )
 }
@@ -52,39 +50,34 @@ const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
   padding: 1rem;
-`
-const Row = styled.div`
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
 `
 
 const Col = styled.div`
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
   justify-content: center;
   align-items: center;
+`
 
-  @media (min-width: 800px){
-    align-items: flex-end;
-  }
-
-  :last-of-type{
-    flex-grow: 2;
-    align-items: center;
-  }
+const Heading = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 20px;
 `
 
 const SectionHeading = styled.h2`
   font-size: 2.5rem;
   margin-top: 0;
+  margin-bottom: 0;
 `
+
 const DescriptionText = styled.p`
   font-size: 1.3rem;
   margin: 5px;
@@ -102,7 +95,7 @@ const LinkText = styled.a`
 `
 
 const SocialLinks = styled.div`
-  margin-top: 20px;
+  margin-top: 25px;
   display: flex;
   align-items: center;
   justify-content: center;

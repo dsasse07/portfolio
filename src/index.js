@@ -4,8 +4,6 @@ import './index.css';
 import App from './App';
 import { BreakpointProvider } from './components/BreakpointProvider'
 import reportWebVitals from './reportWebVitals';
-import store from './store'
-import { Provider } from 'react-redux'
 
 const queries = {
   xs: '(max-width: 320px)',
@@ -15,11 +13,9 @@ const queries = {
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
       <BreakpointProvider queries={queries}>
         <App />
       </BreakpointProvider>
-    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
