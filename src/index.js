@@ -9,6 +9,7 @@ const queries = {
   xs: '(max-width: 320px)',
   sm: '(max-width: 720px)',
   md: '(max-width: 1024px)',
+  dark: '(prefers-color-scheme: dark)'
 }
 
 ReactDOM.render(

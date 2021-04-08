@@ -51,11 +51,11 @@ export default BlogCard
 
 const Card = styled.article`
   position: relative;
-  background: white;
+  background: ${(props) => props.theme.itemBackground};
   width: 100%;
   max-width: 500px;
   padding: 0.5rem;
-  box-shadow: 1px 2px 6px 1px gray;
+  box-shadow: ${(props) => props.theme.shadow};
   overflow: hidden;
   
   :hover .link {

@@ -6,6 +6,7 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import devIcon from '../assets/devIcon.png'
 
 function About() {
+  
   return (
     <Container id="about">
       <PhotoContainer>
@@ -105,6 +106,8 @@ const LogoLink = styled.a`
   align-items: center;
   overflow: hidden;
   transition: all 0.2s;
+  box-shadow: ${(props) => props.theme.shadow};
+
   img{
     width: 80%;
   }
@@ -124,16 +127,17 @@ const ButtonBar = styled.div`
 
 const Button = styled.a`
   padding: 8px;
-  background: #A8EFDD;
-  border: 1px solid gray;
-  box-shadow: 1px 2px 6px 1px gray;
+  background: ${(props) => props.theme.itemBackground};
+  border: 1px solid ${(props) => props.theme.resumeBorder};
+  box-shadow: ${(props) => props.theme.shadow};
   outline: none;
   transition: 0.2s;
   cursor: pointer;
   text-decoration: none;
-  color: black;
+  color: ${(props) => props.theme.resumeColor};
   font-weight: bold;
   font-size: 0.9rem;
+
   :hover{
     transform: scale(1.1);
   }

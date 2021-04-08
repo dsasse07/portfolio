@@ -81,11 +81,11 @@ export default ProjectCard
 
 const Card = styled.article`
   position: relative;
-  background: white;
+  background: ${(props) => props.theme.itemBackground};
   width: 100%;
   max-width: 500px;
   padding: 0.5rem;
-  box-shadow: 1px 2px 6px 1px gray;
+  box-shadow: ${(props) => props.theme.shadow};
   overflow: hidden;
 
   :hover .link {
@@ -102,7 +102,7 @@ const Card = styled.article`
 const Row = styled.div`
   display: flex;
   width: 100%;
-  justify-content: center;
+  justify-content: space-evenly;
 
   :last-of-type{
     gap: 2rem;
@@ -118,9 +118,9 @@ const LinkRow = styled.div`
 const Column = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
   justify-content: center;
   align-items: center;
+  max-width: 50vw;
 `
 const LogoContainer = styled.div`
   display: flex;
@@ -141,6 +141,10 @@ const Title = styled.header`
   margin: 0;
   padding: 0;
   margin-bottom: 0.4rem;
+
+  :first-of-type{
+    font-size: 1.5rem;
+  }
 `
 const LinkButton = styled.a`
   display: flex;
@@ -171,12 +175,12 @@ const TechnologyContainer = styled.section`
   margin-top:0.5rem;
 `
 const TechTag = styled.span`
-  border: 1px solid blue;
+  border: 1px solid ${(props) => props.theme.logoName};
   border-radius: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #a7efde;
+  background: ${(props) => props.theme.hoverColor};
   padding: 0.2rem;
   font-size: 0.8rem;
 `
@@ -193,6 +197,7 @@ const ExpandButton = styled.button`
   margin-top: 0.5rem;
   transition: all 0.2s;
   font-size: 0.7rem;
+  color: ${(props) => props.theme.fontColor};
   :hover {
     background: #dbdbdb;
   }

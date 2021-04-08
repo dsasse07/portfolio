@@ -22,7 +22,7 @@ function Projects() {
         technologies={["ReactJS", "Ionic", "Redux", "Cloudinary", "Rails API", "ActionCable"]}
       />
       <ProjectCard 
-        title="Great Outdoors Guide"
+        title="Outdoors Guide"
         logo="https://i.imgur.com/rHRSUxY.png" 
         description="Developed as a pair-programming project in ReactJS. Connects to the National Parks Service and Google Maps APIs with a Rails API backend"
         repoLink="https://github.com/dsasse07/Great-Outdoors-Guide" 

@@ -1,8 +1,12 @@
 import styled from 'styled-components'
+import ThemeToggler from './ThemeToggler'
 
-function Header() {
+function Header({onToggleTheme}) {
   return (
     <Head>
+      <TogglerContainer>
+        <ThemeToggler onToggleTheme={onToggleTheme}/>
+      </TogglerContainer>
       <Signature href="/" className="logo">
         <AngleBracket className="grey-color"> &lt;</AngleBracket>
         <Name className="logo-name">Daniel Sasse</Name>
@@ -22,15 +26,22 @@ function Header() {
 export default Header
 
 const Head = styled.header`
-  /* position: fixed; */
+  position: relative;
   display: flex;
   margin: 1rem;
   padding: 1rem;
+  padding-top: 50px;
   font-size: 1.5rem;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
   gap: 1rem;
+`
+
+const TogglerContainer = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;  
 `
 
 const Signature = styled.a`
@@ -43,7 +54,7 @@ const Signature = styled.a`
   line-height: normal;
 `
 const AngleBracket = styled.span`
-    color: #686a6b;
+    color: ${(props) => props.theme.logoAngles};
 `
 const Name = styled.span`
   font-family: "Agustina Regular";
@@ -51,7 +62,7 @@ const Name = styled.span`
   font-variant-ligatures: no-common-ligatures;
   -webkit-font-variant-ligatures: no-common-ligatures;
   padding: 0 10px;
-  color: #1E357D;
+  color:  ${(props) => props.theme.logoName};
 `
 
 const NavBar = styled.nav`
@@ -61,9 +72,9 @@ const NavBar = styled.nav`
 `
 
 const Button = styled.button`
-  background: white;
+  background: ${(props) => props.theme.itemBackground};
   border: 1px solid white;
-  color: black;
+  color: ${(props) => props.theme.fontColor};
   display: block;
   font-size: 1.1rem;
   overflow: hidden;
@@ -71,9 +82,9 @@ const Button = styled.button`
   position: relative;
   text-decoration: none;
   transition: 0.2s;
-  box-shadow: 1px 2px 6px 1px gray;
+  box-shadow: ${(props) => props.theme.shadow};
 
   :hover {
-    background: #A8EFDD;
+    background: ${(props) => props.theme.hoverColor};
   }
 `

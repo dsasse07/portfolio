@@ -86,11 +86,11 @@ const DescriptionText = styled.p`
 const LinkText = styled.a`
   text-decoration: none;
   font-size: 1.5rem;
-  color: black;
+  color: ${(props) => props.theme.logoName};
   margin-top: 10px;
 
   :hover{
-    color: blue;
+    text-decoration: underline;
   }
 `
 
