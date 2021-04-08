@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import TwitterIcon from '@material-ui/icons/Twitter';
+import InstagramIcon from '@material-ui/icons/Instagram';
 import devIcon from '../assets/devIcon.png'
 
 function Contact() {
@@ -28,6 +29,9 @@ function Contact() {
             </LogoLink >
             <LogoLink background="#0E65C2" href="https://www.linkedin.com/in/danny-sasse/" target="_blank">
               <LinkedInIcon style={{color: "#FFFFFF"}}  />
+            </LogoLink>
+            <LogoLink background="#F64E4D" href="https://www.instagram.com/dsasse.imaging/" target="_blank">
+              <InstagramIcon style={{color: "#FFFFFF"}}  />
             </LogoLink>
             <LogoLink background="#1EA2F1" href="https://twitter.com/dannysasse" target="_blank">
               <TwitterIcon style={{color: "#FFFFFF"}}  />
