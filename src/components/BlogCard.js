@@ -21,7 +21,7 @@ function BlogCard({title, date, url, image}) {
   
   return (
     <Card className="flex-item" onMouseEnter={handleShowLink} onMouseLeave={handleHideLink}>
-      <LinkButton className="link" href={url} target="_blank" >
+      <LinkButton className="link" href={url} target="_blank" rel="noreferrer">
         <img src={devIcon} alt="Dev.to logo" />
         <IconContainer showLink={showLink}>
           <ArrowIcon />

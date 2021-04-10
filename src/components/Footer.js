@@ -7,7 +7,7 @@ function Footer() {
       <Text>
         Built with React + custom Styled Components
       </Text>
-      <Link href="https://github.com/dsasse07/portfolio" target="_blank" >
+      <Link href="https://github.com/dsasse07/portfolio" target="_blank" rel="noreferrer" >
         View Source Code
       </Link>
     </Container>

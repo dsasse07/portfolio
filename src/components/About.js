@@ -27,24 +27,24 @@ function About() {
           I treasure the beauty of the natural world and enjoy exploring it through hiking and camping, or from the skies as an aerial photographer. I am a science lover and never stop asking "how" or "why".
         </AboutMe>
         <SocialLinks className="social">
-          <LogoLink background="black" href="https://github.com/dsasse07" target="_blank">
+          <LogoLink background="black" href="https://github.com/dsasse07" target="_blank" rel="noreferrer">
             <GitHubIcon style={{color: "#FFFFFF"}} />
           </LogoLink >
-          <LogoLink background="#0E65C2" href="https://www.linkedin.com/in/danny-sasse/" target="_blank">
+          <LogoLink background="#0E65C2" href="https://www.linkedin.com/in/danny-sasse/" target="_blank" rel="noreferrer">
             <LinkedInIcon style={{color: "#FFFFFF"}}  />
           </LogoLink>
-          <LogoLink background="#F64E4D" href="https://www.instagram.com/dsasse.imaging/" target="_blank">
+          <LogoLink background="#F64E4D" href="https://www.instagram.com/dsasse.imaging/" target="_blank" rel="noreferrer">
             <InstagramIcon style={{color: "#FFFFFF"}}  />
           </LogoLink>
-          <LogoLink background="#1EA2F1" href="https://twitter.com/dannysasse" target="_blank">
+          <LogoLink background="#1EA2F1" href="https://twitter.com/dannysasse" target="_blank" rel="noreferrer">
             <TwitterIcon style={{color: "#FFFFFF"}}  />
           </LogoLink>
-          <LogoLink background="black" href="https://dev.to/dsasse07" target="_blank" >
+          <LogoLink background="black" href="https://dev.to/dsasse07" target="_blank" rel="noreferrer" >
             <img src={devIcon} alt="Dev.to" />
           </LogoLink>
         </SocialLinks>
         <ButtonBar>
-          <Button href="https://docs.google.com/document/d/13qDrFQWZhHh7iyThX1FvDnUUeDEtRsfj_AjaB9V3Ino/edit?usp=sharing" target="_blank">
+          <Button href="https://docs.google.com/document/d/13qDrFQWZhHh7iyThX1FvDnUUeDEtRsfj_AjaB9V3Ino/edit?usp=sharing" target="_blank" rel="noreferrer">
             SEE MY RESUME
           </Button>
         </ButtonBar>

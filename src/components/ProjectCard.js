@@ -49,11 +49,11 @@ function ProjectCard({title, logo, technologies, description, repoLink, url, dem
                 </Title>
                 <LinkRow>
                   { url && 
-                    <LinkButton href={url} target="_blank" >
+                    <LinkButton href={url} target="_blank" rel="noreferrer">
                       <LinkIcon />
                     </LinkButton>
                   }
-                  <LinkButton href={repoLink} target="_blank" >
+                  <LinkButton href={repoLink} target="_blank"rel="noreferrer" >
                     <GitHubIcon />
                   </LinkButton>
                 </LinkRow>
