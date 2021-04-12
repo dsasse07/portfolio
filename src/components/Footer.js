@@ -27,6 +27,7 @@ const Container = styled.footer`
 const Text = styled.p`
   margin: 0;
   padding: 0;
+  text-align: center;
 `
 
 const Link = styled.a`

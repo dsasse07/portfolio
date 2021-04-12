@@ -4,6 +4,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import devIcon from '../assets/devIcon.png'
+import mediumIcon from '../assets/mediumIcon.svg'
 
 function Contact() {
   return (
@@ -26,18 +27,27 @@ function Contact() {
           <SocialLinks className="social">
             <LogoLink background="black" href="https://github.com/dsasse07" target="_blank" rel="noreferrer">
               <GitHubIcon style={{color: "#FFFFFF"}} />
+              <span> GitHub </span>
             </LogoLink >
             <LogoLink background="#0E65C2" href="https://www.linkedin.com/in/danny-sasse/" target="_blank" rel="noreferrer">
               <LinkedInIcon style={{color: "#FFFFFF"}}  />
+              <span> LinkedIn </span>
             </LogoLink>
             <LogoLink background="#F64E4D" href="https://www.instagram.com/dsasse.imaging/" target="_blank" rel="noreferrer">
               <InstagramIcon style={{color: "#FFFFFF"}}  />
+              <span> Instagram </span>
             </LogoLink>
             <LogoLink background="#1EA2F1" href="https://twitter.com/dannysasse" target="_blank" rel="noreferrer">
               <TwitterIcon style={{color: "#FFFFFF"}}  />
+              <span> Twitter </span>
             </LogoLink>
             <LogoLink background="black" href="https://dev.to/dsasse07" target="_blank" rel="noreferrer" >
               <img src={devIcon} alt="Dev.to" />
+              <span> Dev Blog </span>
+            </LogoLink>
+            <LogoLink background="white" href="https://dev.to/dsasse07" target="_blank" rel="noreferrer" >
+              <img src={mediumIcon} alt="Dev.to" />
+              <span> Medium Blog </span>
             </LogoLink>
           </SocialLinks>
         </Col>
@@ -117,11 +127,17 @@ const LogoLink = styled.a`
   align-items: center;
   overflow: hidden;
   transition: all 0.2s;
+  box-shadow: ${(props) => props.theme.shadow};
+
   img{
     width: 80%;
   }
 
   :hover{
     transform: scale(1.2);
+  }
+
+  span {
+    display: none;
   }
 `

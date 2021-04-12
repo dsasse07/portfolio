@@ -12,7 +12,8 @@ export const lightTheme = {
   resumeColor: "black",
   gitBackground: "black",
   topButton: "var(--pink)",
-  sliderLeft: "3px"
+  sliderLeft: "3px",
+  togglerColor: "var(--white)"
 }
 
 export const darkTheme = {
@@ -29,5 +30,6 @@ export const darkTheme = {
   resumeColor: "var(--yellow)",
   gitBackground: "white",
   topButton: "var(--darkblue)",
-  sliderLeft: "31px"
+  sliderLeft: "31px",
+  togglerColor: "var(--yellow)"
 }

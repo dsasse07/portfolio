@@ -209,9 +209,9 @@ const ExpandButton = styled.button`
 `
 
 const Description = styled.summary`
-  max-height: ${ props => props.open ? "110px" : "0" };
+  max-height: ${ props => props.open ? "140px" : "0" };
   transition: 0.5s;
-  overflow: hidden;
+  overflow: scroll;
   text-align: center;
   padding-top: 0.5rem;
 `

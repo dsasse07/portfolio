@@ -99,4 +99,9 @@ const GoToTop = styled.button`
   border-radius: 8px;
   box-shadow: ${(props) => props.theme.shadow};
   cursor: pointer;
+
+  :hover{
+    transition: all 0.2s;
+    transform: scale(1.1);
+  }
 `

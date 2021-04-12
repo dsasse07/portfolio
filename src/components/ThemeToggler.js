@@ -19,7 +19,7 @@ const OuterContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid ${(props) => props.theme.logoName};
+  border: 2px solid ${(props) => props.theme.togglerColor};
   border-radius: 20px;
   /* gap: 4px; */
   padding: 2px;
@@ -43,7 +43,7 @@ const Slider = styled.div`
   position: absolute;
   top: 2px;
   left: ${(props) => props.theme.sliderLeft};
-  background: ${(props) => props.theme.logoName};
+  background: ${(props) => props.theme.togglerColor};
   height: 24px;
   width: 24px;
   border-radius: 50%;

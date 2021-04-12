@@ -14,6 +14,12 @@ function Blogs() {
         </Description>
       </Heading>
       <BlogCard
+        title="A Beginner's Guide to Unit-testing with Jest"
+        date="Published: Apr 12 2021"
+        url="https://dev.to/dsasse07/a-beginner-s-guide-to-unit-testing-with-jest-45cc"
+        image="https://res.cloudinary.com/practicaldev/image/fetch/s--PgDsdgyk--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/bbc5bek5atvngq2imz6d.png"
+      />
+      <BlogCard
         title="Conditional Function Invocation without Conditional Statements in JS"
         date="Published: Mar 7 2021"
         url="https://dev.to/dsasse07/conditional-function-invocation-without-conditional-statements-in-js-3lld"
