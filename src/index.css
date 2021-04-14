@@ -17,4 +17,5 @@ code {
   font-style: normal;
   font-weight: normal;
   src: url('./fonts/Agustina.woff') format('woff');
-  }
+  font-display: swap;
+}

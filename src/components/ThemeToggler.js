@@ -4,7 +4,10 @@ import NightsStayIcon from '@material-ui/icons/NightsStay';
 
 function ThemeToggler({onToggleTheme}) {
   return (
-    <OuterContainer onClick={onToggleTheme} >
+    <OuterContainer 
+      aria-label="Dark Mode Toggle" 
+      onClick={onToggleTheme} 
+    >
       <WbSunnyIcon />
       <NightsStayIcon />
       <Slider/>
@@ -14,14 +17,14 @@ function ThemeToggler({onToggleTheme}) {
 
 export default ThemeToggler
 
-const OuterContainer = styled.div`
+const OuterContainer = styled.button`
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 2px solid ${(props) => props.theme.togglerColor};
   border-radius: 20px;
-  /* gap: 4px; */
+  background: none;
   padding: 2px;
   padding-left: 3px;
   padding-right: 2px;

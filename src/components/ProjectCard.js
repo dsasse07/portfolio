@@ -49,11 +49,11 @@ function ProjectCard({title, logo, technologies, description, repoLink, url, dem
                 </Title>
                 <LinkRow>
                   { url && 
-                    <LinkButton href={url} target="_blank" rel="noreferrer">
+                    <LinkButton aria-label={`${title} Website`} href={url} target="_blank" rel="noreferrer">
                       <LinkIcon />
                     </LinkButton>
                   }
-                  <LinkButton href={repoLink} target="_blank"rel="noreferrer" >
+                  <LinkButton aria-label={`${title} Github Repo`} href={repoLink} target="_blank"rel="noreferrer" >
                     <GitHubIcon />
                   </LinkButton>
                 </LinkRow>
@@ -204,6 +204,9 @@ const ExpandButton = styled.button`
   font-size: 0.7rem;
   color: ${(props) => props.theme.fontColor};
   :hover {
+    background: ${(props) => props.theme.hoverColor};
+  }
+  :focus{
     background: ${(props) => props.theme.hoverColor};
   }
 `

@@ -25,27 +25,27 @@ function Contact() {
             dsasse07@gmail.com
           </LinkText>
           <SocialLinks className="social">
-            <LogoLink background="black" href="https://github.com/dsasse07" target="_blank" rel="noreferrer">
+            <LogoLink aria-label="Danny Sasse's Github" background="black" href="https://github.com/dsasse07" target="_blank" rel="noreferrer">
               <GitHubIcon style={{color: "#FFFFFF"}} />
               <span> GitHub </span>
             </LogoLink >
-            <LogoLink background="#0E65C2" href="https://www.linkedin.com/in/danny-sasse/" target="_blank" rel="noreferrer">
+            <LogoLink aria-label="Danny Sasse's LinkedIn" background="#0E65C2" href="https://www.linkedin.com/in/danny-sasse/" target="_blank" rel="noreferrer">
               <LinkedInIcon style={{color: "#FFFFFF"}}  />
               <span> LinkedIn </span>
             </LogoLink>
-            <LogoLink background="#F64E4D" href="https://www.instagram.com/dsasse.imaging/" target="_blank" rel="noreferrer">
+            <LogoLink aria-label="Danny Sasse's Aerial Photography Portfolio" background="#F64E4D" href="https://www.instagram.com/dsasse.imaging/" target="_blank" rel="noreferrer">
               <InstagramIcon style={{color: "#FFFFFF"}}  />
               <span> Instagram </span>
             </LogoLink>
-            <LogoLink background="#1EA2F1" href="https://twitter.com/dannysasse" target="_blank" rel="noreferrer">
+            <LogoLink aria-label="Danny Sasse's Twitter" background="#1EA2F1" href="https://twitter.com/dannysasse" target="_blank" rel="noreferrer">
               <TwitterIcon style={{color: "#FFFFFF"}}  />
               <span> Twitter </span>
             </LogoLink>
-            <LogoLink background="black" href="https://dev.to/dsasse07" target="_blank" rel="noreferrer" >
+            <LogoLink aria-label="Danny Sasse's Dev.to Blog" background="black" href="https://dev.to/dsasse07" target="_blank" rel="noreferrer" >
               <img src={devIcon} alt="Dev.to" />
               <span> Dev Blog </span>
             </LogoLink>
-            <LogoLink background="white" href="https://dev.to/dsasse07" target="_blank" rel="noreferrer" >
+            <LogoLink aria-label="Danny Sasse's Medium Blog" background="white" href="https://dev.to/dsasse07" target="_blank" rel="noreferrer" >
               <img src={mediumIcon} alt="Dev.to" />
               <span> Medium Blog </span>
             </LogoLink>

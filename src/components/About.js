@@ -28,27 +28,27 @@ function About() {
           I treasure the beauty of the natural world and enjoy exploring it through hiking and camping, or from the skies as an aerial photographer. I am a science lover and never stop asking "how" or "why".
         </AboutMe>
         <SocialLinks className="social">
-          <LogoLink background="black" href="https://github.com/dsasse07" target="_blank" rel="noreferrer">
+          <LogoLink aria-label="Danny Sasse's Github" background="black" href="https://github.com/dsasse07" target="_blank" rel="noreferrer">
             <GitHubIcon style={{color: "#FFFFFF"}} />
             <span> GitHub </span>
           </LogoLink >
-          <LogoLink background="#0E65C2" href="https://www.linkedin.com/in/danny-sasse/" target="_blank" rel="noreferrer">
+          <LogoLink aria-label="Danny Sasse's LinkedIn" background="#0E65C2" href="https://www.linkedin.com/in/danny-sasse/" target="_blank" rel="noreferrer">
             <LinkedInIcon style={{color: "#FFFFFF"}}  />
             <span> LinkedIn </span>
           </LogoLink>
-          <LogoLink background="#F64E4D" href="https://www.instagram.com/dsasse.imaging/" target="_blank" rel="noreferrer">
+          <LogoLink aria-label="Danny Sasse's Aerial Photography Portfolio" background="#F64E4D" href="https://www.instagram.com/dsasse.imaging/" target="_blank" rel="noreferrer">
             <InstagramIcon style={{color: "#FFFFFF"}}  />
             <span> Instagram </span>
           </LogoLink>
-          <LogoLink background="#1EA2F1" href="https://twitter.com/dannysasse" target="_blank" rel="noreferrer">
+          <LogoLink aria-label="Danny Sasse's Twitter" background="#1EA2F1" href="https://twitter.com/dannysasse" target="_blank" rel="noreferrer">
             <TwitterIcon style={{color: "#FFFFFF"}}  />
             <span> Twitter </span>
           </LogoLink>
-          <LogoLink background="black" href="https://dev.to/dsasse07" target="_blank" rel="noreferrer" >
+          <LogoLink aria-label="Danny Sasse's Dev.to Blog" background="black" href="https://dev.to/dsasse07" target="_blank" rel="noreferrer" >
             <img src={devIcon} alt="Dev.to" />
             <span> Dev Blog </span>
           </LogoLink>
-          <LogoLink background="white" href="https://dev.to/dsasse07" target="_blank" rel="noreferrer" >
+          <LogoLink aria-label="Danny Sasse's Medium Blog" background="white" href="https://dev.to/dsasse07" target="_blank" rel="noreferrer" >
             <img src={mediumIcon} alt="Dev.to" />
             <span> Medium Blog </span>
           </LogoLink>
@@ -109,9 +109,10 @@ const Greeting = styled.h1`
   font-size: 2.5rem;
   padding: 5px;
 `
-const AboutMe = styled.h3`
+const AboutMe = styled.h2`
   font-weight: normal;
   text-align: center;
+  font-size: 1.17rem;
 
   :nth-of-type(2){
     margin-top: 0;

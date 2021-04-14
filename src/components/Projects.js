@@ -103,7 +103,7 @@ const SectionHeading = styled.h2`
   margin-bottom: 0;
 `
 
-const Description = styled.h4`  
+const Description = styled.h3`  
   text-align: center;
   margin-top: 0;
   margin-bottom: 0;
