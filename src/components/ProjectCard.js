@@ -204,7 +204,7 @@ const ExpandButton = styled.button`
   font-size: 0.7rem;
   color: ${(props) => props.theme.fontColor};
   :hover {
-    background: #dbdbdb;
+    background: ${(props) => props.theme.hoverColor};
   }
 `
 
