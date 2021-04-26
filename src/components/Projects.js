@@ -12,6 +12,16 @@ function Projects() {
         </Description>
       </Heading>
       <ProjectCard 
+        title="AAJC Hackathon"
+        logo="https://i.imgur.com/XOD9l7T.png" 
+        description="Developed as part of the Essteem AAPI Equalithon, hackathon competition. The challenge criteria was to redesign the landing page for the Asian Americans Advancing Justice organization to increase user enaggement."
+        repoLink="https://github.com/dsasse07/essteem-aapi-justice-team" 
+        url="https://aapi-justice-team.netlify.app/"
+        demoVideo="https://youtu.be/20bi-eMu-_s"
+        embedId="20bi-eMu-_s"
+        technologies={["ReactJS", "i18n", "Bootstrap"]}
+      />
+      <ProjectCard 
         title="Dronie"
         logo="https://i.imgur.com/s3wbqbY.png" 
         description="Developed as my capstone project for Flatiron School, it is a photo-sharing social media app for aerial photographers. It incorporates standard social media actions, a robust search feature, and real-time messaging."
