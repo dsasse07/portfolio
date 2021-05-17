@@ -1,6 +1,7 @@
 export const lightTheme = {
   background: "rgb(191,254,212)",
-  gradient: "linear-gradient(0deg, rgba(191,254,212,1) 4%, rgba(148,187,233,1) 100%)",
+  // gradient: "linear-gradient(0deg, rgba(191,254,212,1) 4%, rgba(148,187,233,1) 100%)",
+  gradient: "linear-gradient(0deg, rgba(191,254,212,1) 0%, rgba(163,227,255,1) 100%)",
   fontColor: "black",
   logoAngles: "var(--gray)",
   logoName: "var(--darkblue)",

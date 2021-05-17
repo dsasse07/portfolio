@@ -1,11 +1,10 @@
 import styled from 'styled-components'
 import { useState } from 'react'
-// import { useBreakpoint } from './BreakpointProvider'
 import devIcon from '../assets/devIcon.png'
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
-function BlogCard({title, date, url, image}) {
-  // const breakpoints = useBreakpoint()
+function BlogCard({article}) {
+  const {title, date, url, image} = article
   const [ showLink, setShowLink ] = useState(false)
   let timer
 

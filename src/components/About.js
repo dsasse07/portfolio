@@ -1,11 +1,7 @@
 import styled from 'styled-components'
-import profilePhoto from '../assets/profilePic.png'
-import GitHubIcon from '@material-ui/icons/GitHub';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import devIcon from '../assets/devIcon.png'
-import mediumIcon from '../assets/mediumIcon.svg'
+import profilePhoto from '../assets/formalProfile400.jpg'
+
+import SocialLinks from './SocialLinks';
 
 function About() {
   
@@ -22,37 +18,14 @@ function About() {
           I'm Danny,
         </Greeting>
         <AboutMe> 
-          An enthusiastic Full Stack Software Developer with experience in React and Ruby on Rails. I am passionate about designing and optimizing innovative solutions to projects, and trying new technologies.
+          An enthusiastic Full Stack Software Developer with experience in React and Ruby on Rails. 
+          I am passionate about designing and optimizing innovative solutions to projects, and trying new technologies.
         </AboutMe>
         <AboutMe>
-          I treasure the beauty of the natural world and enjoy exploring it through hiking and camping, or from the skies as an aerial photographer. I am a science lover and never stop asking "how" or "why".
+          I treasure the beauty of the natural world and enjoy exploring it through hiking and camping, or from the skies as an aerial photographer.
+          I am a science lover and never stop asking "how" or "why".
         </AboutMe>
-        <SocialLinks className="social">
-          <LogoLink aria-label="Danny Sasse's Github" background="black" href="https://github.com/dsasse07" target="_blank" rel="noreferrer">
-            <GitHubIcon style={{color: "#FFFFFF"}} />
-            <span> GitHub </span>
-          </LogoLink >
-          <LogoLink aria-label="Danny Sasse's LinkedIn" background="#0E65C2" href="https://www.linkedin.com/in/danny-sasse/" target="_blank" rel="noreferrer">
-            <LinkedInIcon style={{color: "#FFFFFF"}}  />
-            <span> LinkedIn </span>
-          </LogoLink>
-          <LogoLink aria-label="Danny Sasse's Aerial Photography Portfolio" background="#F64E4D" href="https://www.instagram.com/dsasse.imaging/" target="_blank" rel="noreferrer">
-            <InstagramIcon style={{color: "#FFFFFF"}}  />
-            <span> Instagram </span>
-          </LogoLink>
-          <LogoLink aria-label="Danny Sasse's Twitter" background="#1EA2F1" href="https://twitter.com/dannysasse" target="_blank" rel="noreferrer">
-            <TwitterIcon style={{color: "#FFFFFF"}}  />
-            <span> Twitter </span>
-          </LogoLink>
-          <LogoLink aria-label="Danny Sasse's Dev.to Blog" background="black" href="https://dev.to/dsasse07" target="_blank" rel="noreferrer" >
-            <img src={devIcon} alt="Dev.to" />
-            <span> Dev Blog </span>
-          </LogoLink>
-          <LogoLink aria-label="Danny Sasse's Medium Blog" background="white" href="https://dev.to/dsasse07" target="_blank" rel="noreferrer" >
-            <img src={mediumIcon} alt="Dev.to" />
-            <span> Medium Blog </span>
-          </LogoLink>
-        </SocialLinks>
+        <SocialLinks/>
         <ButtonBar>
           <Button href="https://docs.google.com/document/d/13qDrFQWZhHh7iyThX1FvDnUUeDEtRsfj_AjaB9V3Ino/edit?usp=sharing" target="_blank" rel="noreferrer">
             SEE MY RESUME
@@ -68,7 +41,7 @@ export default About
 const Container = styled.section`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   /* gap: 2rem; */
   align-items: center;
   padding: 1rem;
@@ -119,39 +92,39 @@ const AboutMe = styled.h2`
   }
 `
 
-const SocialLinks = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* gap: 0.7rem; */
-  a {
-    margin: 0.35rem;
-  }
-`
-const LogoLink = styled.a`
-  display: flex;
-  border-radius: 50%;
-  background: ${({background}) => background };
-  width: 42px;
-  height: 42px;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  transition: all 0.2s;
-  box-shadow: ${(props) => props.theme.shadow};
+// const SocialLinks = styled.div`
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   /* gap: 0.7rem; */
+//   a {
+//     margin: 0.35rem;
+//   }
+// `
+// const LogoLink = styled.a`
+//   display: flex;
+//   border-radius: 50%;
+//   background: ${({background}) => background };
+//   width: 42px;
+//   height: 42px;
+//   justify-content: center;
+//   align-items: center;
+//   overflow: hidden;
+//   transition: all 0.2s;
+//   box-shadow: ${(props) => props.theme.shadow};
 
-  img{
-    width: 80%;
-  }
+//   img{
+//     width: 80%;
+//   }
 
-  :hover{
-    transform: scale(1.2);
-  }
+//   :hover{
+//     transform: scale(1.2);
+//   }
 
-  span {
-    display: none;
-  }
-`
+//   span {
+//     display: none;
+//   }
+// `
 
 const ButtonBar = styled.div`
   display: flex;

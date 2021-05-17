@@ -31,7 +31,7 @@ const Head = styled.header`
   padding: 1rem;
   flex-wrap: wrap;
   font-size: 1.5rem;
-  justify-content: space-evenly;
+  justify-content: space-around;
   padding-bottom: 0;
   padding-top: 50px;
   position: relative;

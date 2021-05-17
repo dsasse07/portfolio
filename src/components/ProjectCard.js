@@ -1,17 +1,15 @@
 import styled from 'styled-components'
 import { useState } from 'react'
-// import { useBreakpoint } from './BreakpointProvider'
-import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+// import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import LinkIcon from '@material-ui/icons/Link';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import YoutubeEmbed from './YoutubeEmbed'
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
 
-function ProjectCard({title, logo, technologies, description, repoLink, url, demoVideo, embedId}) {
-  const [ showDescription, setShowDescription ] = useState(false)
+function ProjectCard({project}) {
+  const {title, logo, technologies, description, repoLink, url, embedId} = project
   const [ showVideo, setShowVideo ] = useState(false)
-  // const breakpoints = useBreakpoint()
 
   function toggleMode(){
     setShowVideo( showVideo => !showVideo )
@@ -63,15 +61,15 @@ function ProjectCard({title, logo, technologies, description, repoLink, url, dem
               {techTagComponents}
             </TechnologyContainer>
             <Row>
-              <Description open={showDescription}>
+              <Description>
                 {description}
               </Description>
             </Row>
-            <ExpandButton onClick={() => setShowDescription(showDescription => !showDescription) }>
+            {/* <ExpandButton onClick={() => setShowDescription(showDescription => !showDescription) }>
               <DownArrow open={showDescription}/>
-              {showDescription ? "Close" : "Description" }
+              {showDescription ? "Close" : "Expand" }
               <DownArrow open={showDescription}/>
-            </ExpandButton>
+            </ExpandButton> */}
           </>
         }
       </Card>
@@ -89,6 +87,9 @@ const Card = styled.article`
   padding: 0.5rem;
   box-shadow: ${(props) => props.theme.shadow};
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   :hover .link {
     width: 60px;
@@ -190,38 +191,40 @@ const TechTag = styled.span`
   font-size: 0.8rem;
 `
 
-const ExpandButton = styled.button`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: none;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  margin-top: 0.5rem;
-  transition: all 0.2s;
-  font-size: 0.7rem;
-  color: ${(props) => props.theme.fontColor};
-  :hover {
-    background: ${(props) => props.theme.hoverColor};
-  }
-  :focus{
-    background: ${(props) => props.theme.hoverColor};
-  }
-`
+// const ExpandButton = styled.button`
+//   width: 50%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   background: ${(props) => props.theme.hoverColor};
+//   border: 3px solid white;
+//   outline: none;
+//   cursor: pointer;
+//   margin-top: 0.5rem;
+//   transition: all 0.2s;
+//   font-size: 1rem;
+//   color: ${(props) => props.theme.fontColor};
+//   :hover {
+//     background: white;
+//     border: 3px solid ${(props) => props.theme.hoverColor};
+//   }
+//   :focus{
+//     background: ${(props) => props.theme.hoverColor};
+//   }
+// `
 
 const Description = styled.summary`
-  max-height: ${ props => props.open ? "140px" : "0" };
+  /* max-height: ${ props => props.open ? "140px" : "30px" }; */
+  /* opacity: ${ props => props.open ? "100%" : "50%" }; */
   transition: 0.5s;
   overflow: scroll;
   text-align: center;
   padding-top: 0.5rem;
 `
 
-const DownArrow = styled(KeyboardArrowDownIcon)`
-  transform: ${ props => props.open ? "rotateX(180deg)" : "rotateX(0deg)" };
-`
+// const DownArrow = styled(KeyboardArrowDownIcon)`
+//   transform: ${ props => props.open ? "rotateX(180deg)" : "rotateX(0deg)" };
+// `
 
 
 const VideoButton = styled.a`
