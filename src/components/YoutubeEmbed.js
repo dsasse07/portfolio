@@ -1,17 +1,15 @@
 import React from "react";
 import styled from 'styled-components'
+import YouTubePlayer from 'react-player/youtube'
 
-function YoutubeEmbed ({ embedId }) {
+function YoutubeEmbed ({ url }) {
   return (
-    <Container className="video-responsive">
-      <iframe
-        width="853"
-        height="480"
-        src={`https://www.youtube.com/embed/${embedId}`}
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        title="Embedded youtube"
+    <Container>
+      <ResponsivePlayer
+        url={url}
+        controls={true}
+        height='100%'
+        width='100%'
       />
     </Container>
   )
@@ -20,16 +18,12 @@ function YoutubeEmbed ({ embedId }) {
 export default YoutubeEmbed;
 
 const Container = styled.div`
-  overflow: hidden;
-  padding-bottom: 56.25%;
   position: relative;
-  height: 0;
+  width: 100%;
+  height: 300px;
+`
 
-  iframe{
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-  }
+const ResponsivePlayer = styled(YouTubePlayer)`
+  height: 100%;
+  width: 100%;
 `

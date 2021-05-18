@@ -8,7 +8,7 @@ import YoutubeEmbed from './YoutubeEmbed'
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
 
 function ProjectCard({project}) {
-  const {title, logo, technologies, description, repoLink, url, embedId} = project
+  const {title, logo, technologies, description, repoLink, url, demoVideo} = project
   const [ showVideo, setShowVideo ] = useState(false)
 
   function toggleMode(){
@@ -32,9 +32,11 @@ function ProjectCard({project}) {
             <YouTubeIcon style={{color: "white"}} />
           }
         </VideoButton>
-        
+
         { showVideo ?
-          <YoutubeEmbed embedId={embedId} />
+          <YoutubeEmbed
+            url={demoVideo}
+          />
         :
           <>
             <Row>
