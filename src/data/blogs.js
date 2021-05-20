@@ -1,5 +1,11 @@
 export const articles = [
   {
+    title: "Implementing a Social Share Feature",
+    date: "Published: May 20 2021",
+    url: "https://dev.to/dsasse07/implementing-a-social-share-feature-jd7",
+    image: "https://res.cloudinary.com/practicaldev/image/fetch/s--v6eHMr36--/c_imagga_scale,f_auto,fl_progressive,h_420,q_66,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/m9k43r9egz6ensf6y63g.gif",
+  },
+  {
     title: "Beginner's Guide to Jest Testing in React",
     date: "Published: May 13 2021",
     url: "https://dev.to/dsasse07/beginner-s-guide-to-jest-testing-in-react-1nig",
