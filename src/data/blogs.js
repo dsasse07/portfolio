@@ -1,5 +1,11 @@
 export const articles = [
   {
+    title: "Algorithm Tutorial: Champagne Tower Explanation",
+    date: "Published: May 26 2021",
+    url: "https://dev.to/dsasse07/algorithm-practice-champagne-tower-explanation-414h",
+    image: "https://res.cloudinary.com/practicaldev/image/fetch/s--3E84nTsi--/c_imagga_scale,f_auto,fl_progressive,h_420,q_66,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/eo41klvykf9sicf76w6e.gif",
+  },
+  {
     title: "Implementing a Social Share Feature",
     date: "Published: May 20 2021",
     url: "https://dev.to/dsasse07/implementing-a-social-share-feature-jd7",
