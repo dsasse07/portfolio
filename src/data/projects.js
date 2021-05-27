@@ -2,7 +2,7 @@ export const projects = [
   {
     title: "Pycross",
     logo: "https://i.imgur.com/k58W2eP.png" ,
-    description: "Offline nonogram/picross game developed in Python using the Pygame module. A new board is generated at each launch using the paramters in the settings. The board clues are generated through consecutive string analysis.",
+    description: "Offline nonogram/picross game developed in Python using the Pygame module for Stanfard University's CS106A Code in Place program. A new game board is generated at each launch using the paramters in the settings. The board clues are generated through consecutive string analysis.",
     repoLink: "https://github.com/dsasse07/pycross" ,
     url: null,
     demoVideo: "https://youtu.be/np0uua3mhU0",
