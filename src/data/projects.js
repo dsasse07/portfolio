@@ -1,5 +1,15 @@
 export const projects = [
   {
+    title: "Nonogram",
+    logo: "https://i.imgur.com/k58W2eP.png" ,
+    description: "Offline nonogram game developed in Python using the Pygame module. A new board is generated at each launch using the paramters in the settings. The board clues are generated through consecutive string analysis.",
+    repoLink: "https://github.com/dsasse07/nonogram" ,
+    url: null,
+    demoVideo: "https://youtu.be/np0uua3mhU0",
+    embedId: "np0uua3mhU0",
+    technologies: ["Python, OOP, Pygame"],
+  },
+  {
     title: "Asian Americans Advancing Justice Hackathon",
     logo: "https://i.imgur.com/XOD9l7T.png" ,
     description: "Developed as part of the Essteem AAPI Equalithon, hackathon competition. The challenge criteria was to redesign the landing page for the Asian Americans Advancing Justice organization to increase user enaggement.",
