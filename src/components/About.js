@@ -27,7 +27,7 @@ function About() {
         </AboutMe>
         <SocialLinks/>
         <ButtonBar>
-          <Button href="https://docs.google.com/document/d/13qDrFQWZhHh7iyThX1FvDnUUeDEtRsfj_AjaB9V3Ino/edit?usp=sharing" target="_blank" rel="noreferrer">
+          <Button href="https://docs.google.com/document/d/1GNOVe6IyuEkw07ej1BxIF6iFBkWTXv-9sNRw-P-2pUI/edit?usp=sharing" target="_blank" rel="noreferrer">
             SEE MY RESUME
           </Button>
         </ButtonBar>
