@@ -3,24 +3,18 @@ import SocialLinks from './SocialLinks'
 
 function Contact() {
   return (
-    <Container id="contact" >
-        <Heading>
-          <SectionHeading>
-            Contact Me:
-          </SectionHeading>
-        </Heading>
-        <Col>
-          <DescriptionText>
-            Let's Chat!
-          </DescriptionText>
-          <DescriptionText>
-            My Inbox is open:
-          </DescriptionText>
-          <LinkText href="mailto: dsasse07@gmail.com">
-            dsasse07@gmail.com
-          </LinkText>
-          <SocialLinks />
-        </Col>
+    <Container id='contact'>
+      <Heading>
+        <SectionHeading>Contact Me:</SectionHeading>
+      </Heading>
+      <Col>
+        <DescriptionText>Let's Chat!</DescriptionText>
+        <DescriptionText>My Inbox is open:</DescriptionText>
+        <LinkText href='mailto: dsasse07@gmail.com'>
+          dsasse07@gmail.com
+        </LinkText>
+        <SocialLinks />
+      </Col>
     </Container>
   )
 }
@@ -34,7 +28,6 @@ const Container = styled.div`
   align-items: center;
   padding: 1rem;
   min-height: 50vh;
-
 `
 
 const Col = styled.div`
@@ -70,7 +63,7 @@ const LinkText = styled.a`
   color: ${(props) => props.theme.logoName};
   margin: 10px 0;
 
-  :hover{
+  :hover {
     text-decoration: underline;
   }
 `

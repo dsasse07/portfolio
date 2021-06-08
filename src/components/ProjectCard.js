@@ -1,82 +1,80 @@
 import styled from 'styled-components'
 import { useState } from 'react'
 // import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
-import LinkIcon from '@material-ui/icons/Link';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import YouTubeIcon from '@material-ui/icons/YouTube';
+import LinkIcon from '@material-ui/icons/Link'
+import GitHubIcon from '@material-ui/icons/GitHub'
+import YouTubeIcon from '@material-ui/icons/YouTube'
 import YoutubeEmbed from './YoutubeEmbed'
-import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
+import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined'
 
-function ProjectCard({project}) {
-  const {title, logo, technologies, description, repoLink, url, demoVideo} = project
-  const [ showVideo, setShowVideo ] = useState(false)
+function ProjectCard({ project }) {
+  const { title, logo, technologies, description, repoLink, url, demoVideo } =
+    project
+  const [showVideo, setShowVideo] = useState(false)
 
-  function toggleMode(){
-    setShowVideo( showVideo => !showVideo )
+  function toggleMode() {
+    setShowVideo((showVideo) => !showVideo)
   }
 
-  const techTagComponents = technologies.map( (tech, index) => {
-    return (
-      <TechTag key={index}>
-        {tech}
-      </TechTag>
-    )
+  const techTagComponents = technologies.map((tech, index) => {
+    return <TechTag key={index}>{tech}</TechTag>
   })
 
-    return (
-      <Card className="flex-item">
-        <VideoButton className="link" showVideo={showVideo} onClick={toggleMode}>
-          {showVideo ? 
-            <InfoOutlinedIcon style={{color: "white"}} />
-          :
-            <YouTubeIcon style={{color: "white"}} />
-          }
-        </VideoButton>
+  return (
+    <Card className='flex-item'>
+      <VideoButton className='link' showVideo={showVideo} onClick={toggleMode}>
+        {showVideo ? (
+          <InfoOutlinedIcon style={{ color: 'white' }} />
+        ) : (
+          <YouTubeIcon style={{ color: 'white' }} />
+        )}
+      </VideoButton>
 
-        { showVideo ?
-          <YoutubeEmbed
-            url={demoVideo}
-          />
-        :
-          <>
-            <Row>
-              <LogoContainer>
-                <Logo src={logo} alt={ `${title} logo`} />
-              </LogoContainer>
-              <Column>
-                <Title>
-                  {title}
-                </Title>
-                <LinkRow>
-                  { url && 
-                    <LinkButton aria-label={`${title} Website`} href={url} target="_blank" rel="noreferrer">
-                      <LinkIcon />
-                    </LinkButton>
-                  }
-                  <LinkButton aria-label={`${title} Github Repo`} href={repoLink} target="_blank"rel="noreferrer" >
-                    <GitHubIcon />
+      {showVideo ? (
+        <YoutubeEmbed url={demoVideo} />
+      ) : (
+        <>
+          <Row>
+            <LogoContainer>
+              <Logo src={logo} alt={`${title} logo`} />
+            </LogoContainer>
+            <Column>
+              <Title>{title}</Title>
+              <LinkRow>
+                {url && (
+                  <LinkButton
+                    aria-label={`${title} Website`}
+                    href={url}
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    <LinkIcon />
                   </LinkButton>
-                </LinkRow>
-              </Column>
-            </Row>
-            <TechnologyContainer>
-              {techTagComponents}
-            </TechnologyContainer>
-            <Row>
-              <Description>
-                {description}
-              </Description>
-            </Row>
-            {/* <ExpandButton onClick={() => setShowDescription(showDescription => !showDescription) }>
+                )}
+                <LinkButton
+                  aria-label={`${title} Github Repo`}
+                  href={repoLink}
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  <GitHubIcon />
+                </LinkButton>
+              </LinkRow>
+            </Column>
+          </Row>
+          <TechnologyContainer>{techTagComponents}</TechnologyContainer>
+          <Row>
+            <Description>{description}</Description>
+          </Row>
+          {/* <ExpandButton onClick={() => setShowDescription(showDescription => !showDescription) }>
               <DownArrow open={showDescription}/>
               {showDescription ? "Close" : "Expand" }
               <DownArrow open={showDescription}/>
             </ExpandButton> */}
-          </>
-        }
-      </Card>
-    )
-
+        </>
+      )}
+    </Card>
+  )
 }
 
 export default ProjectCard
@@ -145,7 +143,7 @@ const Title = styled.header`
   padding: 0;
   margin-bottom: 0.4rem;
 
-  :first-of-type{
+  :first-of-type {
     font-size: 1.5rem;
   }
 `
@@ -158,15 +156,15 @@ const LinkButton = styled.a`
   border: 1px solid black;
   transition: 0.2s;
   box-shadow: ${(props) => props.theme.shadow};
-  
+
   svg {
     transition: 0.2s;
     color: black;
   }
 
-  :hover{
+  :hover {
     background: black;
-    svg{
+    svg {
       color: white;
     }
   }
@@ -176,7 +174,7 @@ const TechnologyContainer = styled.section`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top:0.5rem;
+  margin-top: 0.5rem;
 
   span {
     margin: 0.1rem;
@@ -216,8 +214,8 @@ const TechTag = styled.span`
 // `
 
 const Description = styled.summary`
-  /* max-height: ${ props => props.open ? "140px" : "30px" }; */
-  /* opacity: ${ props => props.open ? "100%" : "50%" }; */
+  /* max-height: ${(props) => (props.open ? '140px' : '30px')}; */
+  /* opacity: ${(props) => (props.open ? '100%' : '50%')}; */
   transition: 0.5s;
   overflow: scroll;
   text-align: center;
@@ -228,7 +226,6 @@ const Description = styled.summary`
 //   transform: ${ props => props.open ? "rotateX(180deg)" : "rotateX(0deg)" };
 // `
 
-
 const VideoButton = styled.a`
   position: absolute;
   top: 0;
@@ -237,14 +234,14 @@ const VideoButton = styled.a`
   width: 30px;
   height: 30px;
   text-decoration: none;
-  background: ${({showVideo}) => showVideo ? "black" : "#FF0102" };
+  background: ${({ showVideo }) => (showVideo ? 'black' : '#FF0102')};
   border-radius: 0 0 0 80px;
   padding: 5px;
   border-left: 1px solid ${(props) => props.theme.itemBackground};
   border-bottom: 1px solid ${(props) => props.theme.itemBackground};
   transition: all 0.3s;
   cursor: pointer;
-  opacity: ${({showVideo}) => showVideo ? "70%" : "100%" };
+  opacity: ${({ showVideo }) => (showVideo ? '70%' : '100%')};
   z-index: 2;
 
   svg {
@@ -255,4 +252,3 @@ const VideoButton = styled.a`
     transition: 0.2s;
   }
 `
-

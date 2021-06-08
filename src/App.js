@@ -6,7 +6,7 @@ import Projects from './components/Projects'
 import Blogs from './components/Blogs'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import PublishIcon from '@material-ui/icons/Publish';
+import PublishIcon from '@material-ui/icons/Publish'
 import { useRef, useState, useEffect } from 'react'
 import { useBreakpoint } from './components/BreakpointProvider'
 import { lightTheme, darkTheme } from './theme/themes.js'
@@ -31,61 +31,60 @@ const GlobalStyle = createGlobalStyle`
     color: ${(props) => props.theme.fontColor};
     transition: all 0.2s;
   }
-`;
-
-
-
-
+`
 
 function App() {
-  const topRef = useRef(null) 
-  const scrollToRef = ref => window.scrollTo( {top: ref.current.offsetTop, behavior: "smooth"})   
-  const [ showButton, setShowButton ] = useState(false)
+  const topRef = useRef(null)
+  const scrollToRef = (ref) =>
+    window.scrollTo({ top: ref.current.offsetTop, behavior: 'smooth' })
+  const [showButton, setShowButton] = useState(false)
   const breakpoints = useBreakpoint()
-  const [ theme, setTheme ] = useState(breakpoints.dark===true ? darkTheme : lightTheme )
-  window.addEventListener( "scroll", handleShowButton)
+  const [theme, setTheme] = useState(
+    breakpoints.dark === true ? darkTheme : lightTheme
+  )
+  window.addEventListener('scroll', handleShowButton)
 
-  useEffect( () => {
-    setTheme( breakpoints.dark === true ? darkTheme : lightTheme )
+  useEffect(() => {
+    setTheme(breakpoints.dark === true ? darkTheme : lightTheme)
   }, [breakpoints.dark])
 
-  function handleShowButton(){
+  function handleShowButton() {
     if (window.scrollY > 200 && !showButton) {
       setShowButton(true)
       return
     }
-    if (window.scrollY <= 200 && !showButton){
+    if (window.scrollY <= 200 && !showButton) {
       setShowButton(false)
       return
     }
   }
 
   const handleToggleTheme = () => {
-    setTheme( theme => theme === lightTheme ? darkTheme : lightTheme)
+    setTheme((theme) => (theme === lightTheme ? darkTheme : lightTheme))
   }
 
   return (
     <>
-      <ThemeProvider theme={theme} >
+      <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <div id="top" ref={topRef}> </div>
+        <div id='top' ref={topRef}></div>
         <Header onToggleTheme={handleToggleTheme} />
         <About />
         <Projects />
         <Blogs />
         <Contact />
         <Footer />
-        { showButton &&
-          <GoToTop onClick={ () => scrollToRef(topRef) } >  
+        {showButton && (
+          <GoToTop onClick={() => scrollToRef(topRef)}>
             <PublishIcon />
           </GoToTop>
-        }
+        )}
       </ThemeProvider>
     </>
   )
 }
 
-export default App;
+export default App
 
 const GoToTop = styled.button`
   position: fixed;
@@ -100,7 +99,7 @@ const GoToTop = styled.button`
   box-shadow: ${(props) => props.theme.shadow};
   cursor: pointer;
 
-  :hover{
+  :hover {
     transition: all 0.2s;
     transform: scale(1.1);
   }

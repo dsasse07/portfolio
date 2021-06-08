@@ -1,23 +1,27 @@
 import styled from 'styled-components'
 import ThemeToggler from './ThemeToggler'
 
-function Header({onToggleTheme}) {
+function Header({ onToggleTheme }) {
   return (
     <Head>
       <TogglerContainer>
-        <ThemeToggler onToggleTheme={onToggleTheme}/>
+        <ThemeToggler onToggleTheme={onToggleTheme} />
       </TogglerContainer>
-      <Signature href="/" className="logo">
-        <AngleBracket className="grey-color"> &lt;</AngleBracket>
-        <Name className="logo-name">Daniel Sasse</Name>
-        <AngleBracket className="grey-color">/&gt;</AngleBracket>
+      <Signature href='/' className='logo'>
+        <AngleBracket className='grey-color'> &lt;</AngleBracket>
+        <Name className='logo-name'>Daniel Sasse</Name>
+        <AngleBracket className='grey-color'>/&gt;</AngleBracket>
       </Signature>
       <NavBar>
-        <Button as="a" href="#projects"> 
+        <Button as='a' href='#projects'>
           Projects
         </Button>
-        <Button as="a" href="#blogs"> Writing </Button>
-        <Button as="a" href="#contact"> Contact </Button>
+        <Button as='a' href='#blogs'>
+          Writing
+        </Button>
+        <Button as='a' href='#contact'>
+          Contact
+        </Button>
       </NavBar>
     </Head>
   )
@@ -42,7 +46,7 @@ const Head = styled.header`
 const TogglerContainer = styled.div`
   position: absolute;
   top: 0;
-  right: 0;  
+  right: 0;
 `
 
 const Signature = styled.a`
@@ -55,19 +59,19 @@ const Signature = styled.a`
   line-height: normal;
 `
 const AngleBracket = styled.span`
-    color: ${(props) => props.theme.logoAngles};
+  color: ${(props) => props.theme.logoAngles};
 `
 const Name = styled.span`
-  font-family: "Agustina Regular";
+  font-family: 'Agustina Regular';
   font-weight: bold;
   font-variant-ligatures: no-common-ligatures;
   -webkit-font-variant-ligatures: no-common-ligatures;
   padding: 0 10px;
-  color:  ${(props) => props.theme.logoName};
+  color: ${(props) => props.theme.logoName};
 `
 
 const NavBar = styled.nav`
-  display: flex; 
+  display: flex;
   flex-wrap: wrap;
   /* gap: 1rem; */
   justify-content: center;

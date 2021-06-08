@@ -1,16 +1,13 @@
 import styled from 'styled-components'
-import WbSunnyIcon from '@material-ui/icons/WbSunny';
-import NightsStayIcon from '@material-ui/icons/NightsStay';
+import WbSunnyIcon from '@material-ui/icons/WbSunny'
+import NightsStayIcon from '@material-ui/icons/NightsStay'
 
-function ThemeToggler({onToggleTheme}) {
+function ThemeToggler({ onToggleTheme }) {
   return (
-    <OuterContainer 
-      aria-label="Dark Mode Toggle" 
-      onClick={onToggleTheme} 
-    >
+    <OuterContainer aria-label='Dark Mode Toggle' onClick={onToggleTheme}>
       <WbSunnyIcon />
       <NightsStayIcon />
-      <Slider/>
+      <Slider />
     </OuterContainer>
   )
 }
@@ -30,15 +27,14 @@ const OuterContainer = styled.button`
   padding-right: 2px;
   cursor: pointer;
 
-  svg{
+  svg {
     height: 25px;
     width: 25px;
     color: ${(props) => props.theme.fontColor};
-    
-    :first-of-type{
+
+    :first-of-type {
       margin-right: 4px;
     }
-
   }
 `
 

@@ -1,33 +1,35 @@
 import styled from 'styled-components'
 import profilePhoto from '../assets/formalProfile400.jpg'
 
-import SocialLinks from './SocialLinks';
+import SocialLinks from './SocialLinks'
 
 function About() {
-  
   return (
-    <Container id="about">
-      <PhotoContainer className="flex-item">
-        <img src={profilePhoto} alt="Danny Sasse" />
+    <Container id='about'>
+      <PhotoContainer className='flex-item'>
+        <img src={profilePhoto} alt='Danny Sasse' />
       </PhotoContainer>
-      <TextContainer className="flex-item" >
-        <Greeting> 
-          Hello!
-        </Greeting>
-        <Greeting>
-          I'm Danny,
-        </Greeting>
-        <AboutMe> 
-          An enthusiastic Full Stack Software Developer with experience in React and Ruby on Rails. 
-          I am passionate about designing and optimizing innovative solutions to projects, and trying new technologies.
+      <TextContainer className='flex-item'>
+        <Greeting>Hello!</Greeting>
+        <Greeting>I'm Danny,</Greeting>
+        <AboutMe>
+          An enthusiastic Full Stack Software Developer with experience in React
+          and Ruby on Rails. I am passionate about designing and optimizing
+          innovative solutions to projects, and trying new technologies.
         </AboutMe>
         <AboutMe>
-          I treasure the beauty of the natural world and enjoy exploring it through hiking and camping, or from the skies as an aerial photographer.
-          I am a science lover and never stop asking "how" or "why".
+          I treasure the beauty of the natural world and enjoy exploring it
+          through hiking and camping, or from the skies as an aerial
+          photographer. I am a science lover and never stop asking "how" or
+          "why".
         </AboutMe>
-        <SocialLinks/>
+        <SocialLinks />
         <ButtonBar>
-          <Button href="https://docs.google.com/document/d/1GNOVe6IyuEkw07ej1BxIF6iFBkWTXv-9sNRw-P-2pUI/edit?usp=sharing" target="_blank" rel="noreferrer">
+          <Button
+            href='https://docs.google.com/document/d/1GNOVe6IyuEkw07ej1BxIF6iFBkWTXv-9sNRw-P-2pUI/edit?usp=sharing'
+            target='_blank'
+            rel='noreferrer'
+          >
             SEE MY RESUME
           </Button>
         </ButtonBar>
@@ -87,7 +89,7 @@ const AboutMe = styled.h2`
   text-align: center;
   font-size: 1.17rem;
 
-  :nth-of-type(2){
+  :nth-of-type(2) {
     margin-top: 0;
   }
 `
@@ -147,7 +149,7 @@ const Button = styled.a`
   font-weight: bold;
   font-size: 0.9rem;
 
-  :hover{
+  :hover {
     transform: scale(1.1);
   }
-` 
+`

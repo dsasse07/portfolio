@@ -4,10 +4,12 @@ import styled from 'styled-components'
 function Footer() {
   return (
     <Container>
-      <Text>
-        Built with React + custom Styled Components
-      </Text>
-      <Link href="https://github.com/dsasse07/portfolio" target="_blank" rel="noreferrer" >
+      <Text>Built with React + custom Styled Components</Text>
+      <Link
+        href='https://github.com/dsasse07/portfolio'
+        target='_blank'
+        rel='noreferrer'
+      >
         View Source Code
       </Link>
     </Container>
@@ -36,10 +38,8 @@ const Link = styled.a`
   padding-top: 10px;
   text-decoration: none;
   color: ${(props) => props.theme.logoName};
-  
-  :hover{
+
+  :hover {
     text-decoration: underline;
-  } 
+  }
 `
-
-

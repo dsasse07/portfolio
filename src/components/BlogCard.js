@@ -1,49 +1,48 @@
 import styled from 'styled-components'
 import { useState } from 'react'
 import devIcon from '../assets/devIcon.png'
-import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward'
 
-function BlogCard({article}) {
-  const {title, date, url, image} = article
-  const [ showLink, setShowLink ] = useState(false)
+function BlogCard({ article }) {
+  const { title, date, url, image } = article
+  const [showLink, setShowLink] = useState(false)
   let timer
 
-  function handleShowLink(){
-    timer = setTimeout( () => {
-      setShowLink( true )
+  function handleShowLink() {
+    timer = setTimeout(() => {
+      setShowLink(true)
     }, 200)
   }
-  function handleHideLink(){
+  function handleHideLink() {
     setShowLink(false)
     clearTimeout(timer)
   }
-  
+
   return (
-    <Card className="flex-item" onMouseEnter={handleShowLink} onMouseLeave={handleHideLink}>
-      <LinkButton className="link" href={url} target="_blank" rel="noreferrer">
-        <img src={devIcon} alt="Dev.to logo" />
+    <Card
+      className='flex-item'
+      onMouseEnter={handleShowLink}
+      onMouseLeave={handleHideLink}
+    >
+      <LinkButton className='link' href={url} target='_blank' rel='noreferrer'>
+        <img src={devIcon} alt='Dev.to logo' />
         <IconContainer showLink={showLink}>
           <ArrowIcon />
         </IconContainer>
       </LinkButton>
       <Row>
         <LogoContainer>
-          <Logo src={image} alt={ `${title}`} />
+          <Logo src={image} alt={`${title}`} />
         </LogoContainer>
       </Row>
       <Row>
-        <Title>
-          {title}
-        </Title>
+        <Title>{title}</Title>
       </Row>
       <Row>
-        <PubDate>
-          {date}
-        </PubDate>
+        <PubDate>{date}</PubDate>
       </Row>
-  </Card>
+    </Card>
   )
-
 }
 
 export default BlogCard
@@ -56,16 +55,16 @@ const Card = styled.article`
   padding: 0.5rem;
   box-shadow: ${(props) => props.theme.shadow};
   overflow: hidden;
-  
+
   :hover .link {
     width: 100px;
     height: 75px;
 
-    img{
+    img {
       right: 30px;
       top: 20px;
     }
-    div{
+    div {
       top: 21px;
     }
   }
@@ -132,14 +131,9 @@ const IconContainer = styled.div`
   position: absolute;
   top: 8px;
   right: 8px;
-  opacity: ${ ({showLink}) => showLink ? "100%" : "0" };
+  opacity: ${({ showLink }) => (showLink ? '100%' : '0')};
 `
 
 const ArrowIcon = styled(ArrowForwardIcon)`
   color: white;
 `
-
-
-
-
-

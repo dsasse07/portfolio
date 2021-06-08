@@ -3,22 +3,20 @@ import ProjectCard from './ProjectCard'
 import { projects } from '../data/projects'
 
 function Projects() {
-  const projectCards = projects.map( (project, index) => {
+  const projectCards = projects.map((project, index) => {
     return <ProjectCard key={index} project={project} />
   })
   return (
-    <Container id="projects">
+    <Container id='projects'>
       <Heading>
-        <SectionHeading>
-          Tech Projects
-        </SectionHeading>
+        <SectionHeading>Tech Projects</SectionHeading>
         <Description>
-          Recent projects utilizing different technologies. Flip each card for a demo!
+          Recent projects utilizing different technologies. Flip each card for a
+          demo!
         </Description>
       </Heading>
 
-    {projectCards}
-
+      {projectCards}
     </Container>
   )
 }
@@ -33,8 +31,8 @@ const Container = styled.div`
   align-items: center;
   padding: 1rem;
   min-height: 100vh;
-  
-  .flex-item{
+
+  .flex-item {
     margin: 1rem;
   }
 `
@@ -47,8 +45,9 @@ const Heading = styled.div`
   /* gap: 1rem; */
   width: 100%;
   padding: 20px;
-  
-  h2, h4 {
+
+  h2,
+  h4 {
     margin: 0.5rem;
   }
 `
@@ -59,7 +58,7 @@ const SectionHeading = styled.h2`
   margin-bottom: 0;
 `
 
-const Description = styled.h3`  
+const Description = styled.h3`
   text-align: center;
   margin-top: 0;
   margin-bottom: 0;
