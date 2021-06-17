@@ -1,5 +1,20 @@
 export const articles = [
   {
+    title:
+      'Algorithm Tutorial: Intro to Heaps and Priority Queue Implementation',
+    date: 'Published: Jun 16 2021',
+    url: 'https://dev.to/dsasse07/what-the-heap-utilizing-a-priority-queue-25j9#full-code',
+    image:
+      'https://res.cloudinary.com/practicaldev/image/fetch/s--9Adz0Ixa--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6j90hvoczs34axaicgn2.png',
+  },
+  {
+    title: 'Algorithm Tutorial: Max Area of an Island (DFS)',
+    date: 'Published: Jun 9 2021',
+    url: 'https://dev.to/dsasse07/algorithm-tutorial-max-area-of-an-island-dfs-53eg',
+    image:
+      'https://res.cloudinary.com/practicaldev/image/fetch/s--f8IgJvh---/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/m8s2vofxdrsxf8okmqxc.jpeg',
+  },
+  {
     title: 'Wait for it: Implementing a sleep() function in JS',
     date: 'Published: Jun 3 2021',
     url: 'https://dev.to/dsasse07/wait-for-it-implementing-a-sleep-function-in-js-2oac',
