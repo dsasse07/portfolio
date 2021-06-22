@@ -1,5 +1,12 @@
 export const articles = [
   {
+    title: 'Algorithm Tutorial: Intro to Heaps - Heapify & Heap Sort',
+    date: 'Published: Jun 22 2021',
+    url: 'https://dev.to/dsasse07/algorithm-tutorial-intro-to-heaps-heapify-heap-sort-oa8',
+    image:
+      'https://res.cloudinary.com/practicaldev/image/fetch/s--HTnuHGKm--/c_imagga_scale,f_auto,fl_progressive,h_420,q_66,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/dpy879r83nua30a2ntgf.gif',
+  },
+  {
     title:
       'Algorithm Tutorial: Intro to Heaps and Priority Queue Implementation',
     date: 'Published: Jun 16 2021',
