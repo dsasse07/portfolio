@@ -1,5 +1,12 @@
 export const articles = [
   {
+    title: 'Implementing a Scroll To Top feature in React',
+    date: 'Published: Jul 1 2021',
+    url: 'https://dev.to/dsasse07/implementing-a-scroll-to-top-feature-in-react-4b5n',
+    image:
+      'https://res.cloudinary.com/practicaldev/image/fetch/s--5Z895lbB--/c_imagga_scale,f_auto,fl_progressive,h_420,q_66,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/9tx64fif954kuvt84738.gif',
+  },
+  {
     title: 'Algorithm Tutorial: Intro to Heaps - Heapify & Heap Sort',
     date: 'Published: Jun 22 2021',
     url: 'https://dev.to/dsasse07/algorithm-tutorial-intro-to-heaps-heapify-heap-sort-oa8',
